@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Habalyze Support</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        .intro {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 30px 0;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        .help-text {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .contact-info {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .contact-info h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .priority-high { background-color: #ffebee; color: #c62828; }
+        .priority-medium { background-color: #fff3e0; color: #f57c00; }
+        .priority-low { background-color: #e8f5e8; color: #2e7d32; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            body {
+                padding: 10px;
+            }
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    
+    <h1>📧 Kontakt & Support</h1>
+    
+    <div class="intro">
+        <h3>🤝 Wir helfen Ihnen gerne!</h3>
+        <p>Haben Sie Fragen zu <strong>Habalyze</strong>, benötigen Sie technischen Support oder möchten Sie Feedback geben? Nutzen Sie das untenstehende Formular, um uns zu kontaktieren. Wir bemühen uns, alle Anfragen innerhalb von 24-48 Stunden zu beantworten.</p>
+    </div>
+
+    <div class="form-container">
+        <form id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Ihr Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Ihre E-Mail-Adresse <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="help-text">Für Rückfragen und Updates zu Ihrer Anfrage</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Art der Anfrage <span class="required">*</span></label>
+                <select id="subject" name="subject" required>
+                    <option value="">Bitte wählen Sie...</option>
+                    <option value="Bug Report">🐛 Fehler melden</option>
+                    <option value="Feature Request">💡 Neue Funktion vorschlagen</option>
+                    <option value="Technical Support">🔧 Technischer Support</option>
+                    <option value="Account Issues">👤 Konto-/Anmeldeproblem</option>
+                    <option value="Subscription Issues">💳 Abo-/Zahlungsproblem</option>
+                    <option value="Privacy Question">🛡️ Datenschutzfrage</option>
+                    <option value="AI Feature Help">🤖 Hilfe mit AI-Features</option>
+                    <option value="Data Export">📤 Datenexport anfragen</option>
+                    <option value="App Feedback">⭐ Allgemeines Feedback</option>
+                    <option value="Other">❓ Sonstiges</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="appVersion">App-Version</label>
+                    <input type="text" id="appVersion" name="appVersion" placeholder="z.B. 1.2.3">
+                    <div class="help-text">Zu finden in: App → Einstellungen → Über</div>
+                </div>
+                <div class="form-group">
+                    <label for="device">Gerät & Betriebssystem</label>
+                    <select id="device" name="device">
+                        <option value="">Bitte wählen Sie...</option>
+                        <option value="iPhone (iOS)">📱 iPhone (iOS)</option>
+                        <option value="iPad (iOS)">📱 iPad (iOS)</option>
+                        <option value="Android Phone">📱 Android Smartphone</option>
+                        <option value="Android Tablet">📱 Android Tablet</option>
+                        <option value="Other">🔧 Anderes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="osVersion">Betriebssystem-Version</label>
+                <input type="text" id="osVersion" name="osVersion" placeholder="z.B. iOS 17.2 oder Android 14">
+                <div class="help-text">Hilft uns bei der Problemdiagnose</div>
+            </div>
+
+            <div class="form-group">
+                <label for="subscription">Abo-Status</label>
+                <select id="subscription" name="subscription">
+                    <option value="">Bitte wählen Sie...</option>
+                    <option value="Free User">🆓 Kostenlose Version</option>
+                    <option value="Pro Monthly">⭐ Pro (Monatlich)</option>
+                    <option value="Pro Yearly">⭐ Pro (Jährlich)</option>
+                    <option value="Trial">🚀 Testversion</option>
+                    <option value="Unknown">❓ Weiß ich nicht</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="priority">Dringlichkeit</label>
+                <select id="priority" name="priority">
+                    <option value="Low">🟢 Niedrig - Allgemeine Frage</option>
+                    <option value="Medium" selected>🟡 Normal - Standardanfrage</option>
+                    <option value="High">🔴 Hoch - App funktioniert nicht</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Ihre Nachricht <span class="required">*</span></label>
+                <textarea id="message" name="message" required placeholder="Beschreiben Sie bitte Ihr Anliegen so detailliert wie möglich:&#10;&#10;• Bei Fehlern: Was genau passiert?&#10;• Bei Feature-Wünschen: Wie würde das Feature funktionieren?&#10;• Bei Problemen: Welche Schritte haben Sie bereits versucht?&#10;&#10;Je mehr Details Sie uns geben, desto besser können wir Ihnen helfen! 😊"></textarea>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="sendEmail()">
+                📨 Nachricht senden
+            </button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h3>📞 Alternative Kontaktmöglichkeiten</h3>
+        <p><strong>E-Mail:</strong> <a href="mailto:amine.karabila@outlook.com">amine.karabila@outlook.com</a></p>
+        <p><strong>Antwortzeit:</strong> In der Regel innerhalb von 24-48 Stunden</p>
+        <p><strong>Sprachen:</strong> Deutsch, Englisch</p>
+        
+        <h3>🚨 Für dringende Probleme</h3>
+        <p>Falls die App komplett nicht funktioniert oder Sie keinen Zugang zu wichtigen Funktionen haben, senden Sie uns bitte direkt eine E-Mail mit dem Betreff <strong>"DRINGEND - Habalyze Problem"</strong>.</p>
+    </div>
+
+    <script>
+        function sendEmail() {
+            // Formular-Daten sammeln
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const appVersion = document.getElementById('appVersion').value;
+            const device = document.getElementById('device').value;
+            const osVersion = document.getElementById('osVersion').value;
+            const subscription = document.getElementById('subscription').value;
+            const priority = document.getElementById('priority').value;
+            const message = document.getElementById('message').value;
+
+            // Validierung
+            if (!name || !email || !subject || !message) {
+                alert('Bitte füllen Sie alle Pflichtfelder (*) aus.');
+                return;
+            }
+
+            // E-Mail-Betreff erstellen
+            const priorityText = priority === 'High' ? '🔴 DRINGEND - ' : 
+                               priority === 'Medium' ? '🟡 ' : '🟢 ';
+            const emailSubject = `${priorityText}Habalyze: ${subject}`;
+
+            // E-Mail-Body erstellen
+            let emailBody = `Hallo,\n\n`;
+            emailBody += `Kontaktanfrage über das Habalyze Kontaktformular:\n\n`;
+            emailBody += `───────────────────────────────────\n`;
+            emailBody += `📋 KONTAKTDATEN\n`;
+            emailBody += `───────────────────────────────────\n`;
+            emailBody += `Name: ${name}\n`;
+            emailBody += `E-Mail: ${email}\n`;
+            emailBody += `Art der Anfrage: ${subject}\n`;
+            emailBody += `Dringlichkeit: ${priority}\n\n`;
+            
+            emailBody += `───────────────────────────────────\n`;
+            emailBody += `📱 TECHNISCHE INFORMATIONEN\n`;
+            emailBody += `───────────────────────────────────\n`;
+            emailBody += `App-Version: ${appVersion || 'Nicht angegeben'}\n`;
+            emailBody += `Gerät: ${device || 'Nicht angegeben'}\n`;
+            emailBody += `Betriebssystem: ${osVersion || 'Nicht angegeben'}\n`;
+            emailBody += `Abo-Status: ${subscription || 'Nicht angegeben'}\n\n`;
+            
+            emailBody += `───────────────────────────────────\n`;
+            emailBody += `💬 NACHRICHT\n`;
+            emailBody += `───────────────────────────────────\n`;
+            emailBody += `${message}\n\n`;
+            emailBody += `───────────────────────────────────\n\n`;
+            emailBody += `Mit freundlichen Grüßen,\n${name}`;
+
+            // mailto-Link erstellen
+            const mailtoLink = `mailto:amine.karabila@outlook.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // E-Mail-Client öffnen
+            window.location.href = mailtoLink;
+        }
+
+        // Formular beim Laden initialisieren
+        document.addEventListener('DOMContentLoaded', function() {
+            // Priority auf "Medium" setzen als Standard
+            document.getElementById('priority').value = 'Medium';
+        });
+    </script>
+</body>
+</html> 
