@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start - Rechtliches</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .intro {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.1em;
+        }
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        .link-card {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            min-width: 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .link-card:hover {
+            background-color: #e9ecef;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        .link-card h3 {
+            margin: 0 0 10px 0;
+            color: #3498db;
+        }
+        .link-card p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .emoji {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        @media (max-width: 600px) {
+            .links-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .link-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Willkommen 👋</h1>
+    
+    <div class="intro">
+        <p>Dies ist die Infoseite meiner App.</p>
+        <p>Hier finden Sie alle rechtlichen Informationen:</p>
+    </div>
+
+    <div class="links-container">
+        <a href="datenschutz.html" class="link-card">
+            <span class="emoji">🛡️</span>
+            <h3>Datenschutzerklärung</h3>
+            <p>Informationen zum Datenschutz und zur Datenverarbeitung</p>
+        </a>
+
+        <a href="impressum.html" class="link-card">
+            <span class="emoji">📋</span>
+            <h3>Impressum</h3>
+            <p>Angaben zum Verantwortlichen nach dem Telemediengesetz</p>
+        </a>
+
+        <a href="nutzungsbedingungen.html" class="link-card">
+            <span class="emoji">📜</span>
+            <h3>Nutzungsbedingungen</h3>
+            <p>Bedingungen für die Nutzung der App</p>
+        </a>
+    </div>
+</body>
+</html> 

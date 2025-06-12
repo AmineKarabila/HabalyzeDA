@@ -1,8 +1,36 @@
-# Site-Metadaten (optional anpassen)
+# Site-Metadaten
 title: Rechtliches
 lang: de
+description: "Rechtliche Informationen für HabalyzeDA"
 
 # wichtig für Projekt-Sites
 baseurl: "/HabalyzeDA"
+url: "https://username.github.io"  # Ersetze 'username' durch deinen GitHub-Benutzernamen
+
+# HTML-Dateien verarbeiten
+plugins:
+  - jekyll-sitemap
+
+# Einstellungen für HTML-Dateien
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Dateien und Ordner ausschließen
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Markdown-Engine (falls noch Markdown-Dateien verwendet werden)
+markdown: kramdown
+highlighter: rouge
+
+# Encoding
+encoding: utf-8
+
 # schlichtes integriertes Theme
 theme: jekyll-theme-minimal
