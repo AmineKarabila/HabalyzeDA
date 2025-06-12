@@ -3,7 +3,6 @@ title: Rechtliches
 lang: de
 
 # wichtig für Projekt-Sites
-baseurl: "/HabularyzeDA"
-
+baseurl: "/HabalyzeDA"
 # schlichtes integriertes Theme
 theme: jekyll-theme-minimal
