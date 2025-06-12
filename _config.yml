@@ -1,4 +1,9 @@
-title: Meine App
-description: Offizielle Informations­seite
-theme: jekyll-theme-minimal   # integriertes GitHub-Pages-Theme
+# Site-Metadaten (optional anpassen)
+title: Rechtliches
 lang: de
+
+# wichtig für Projekt-Sites
+baseurl: "/HabularyzeDA"
+
+# schlichtes integriertes Theme
+theme: jekyll-theme-minimal
